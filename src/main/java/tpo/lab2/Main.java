@@ -4,6 +4,7 @@ import tpo.lab2.calculator.logarithmic.Ln;
 import tpo.lab2.calculator.logarithmic.Log10;
 import tpo.lab2.calculator.logarithmic.Log2;
 import tpo.lab2.calculator.logarithmic.Log3;
+import tpo.lab2.calculator.logarithmic.Log5;
 import tpo.lab2.calculator.system.FunctionsSystem;
 import tpo.lab2.calculator.trigonometric.*;
 import tpo.lab2.util.CsvWriter;
@@ -20,17 +21,10 @@ public class Main {
         Cos cos = new Cos(0.00000001);
         csvWriter.write("cos.csv", cos, BigDecimal.valueOf(-PI), BigDecimal.valueOf(PI), BigDecimal.valueOf(0.1));
 
-        Sin sin = new Sin(0.00000001);
-        csvWriter.write("sin.csv", sin, BigDecimal.valueOf(-PI), BigDecimal.valueOf(PI), BigDecimal.valueOf(0.1));
-
-        Tan tan = new Tan(0.00000001);
-        csvWriter.write("tan.csv", tan, BigDecimal.valueOf(-PI), BigDecimal.valueOf(PI), BigDecimal.valueOf(0.1));
 
         Cot cot = new Cot(0.00000001);
         csvWriter.write("cot.csv", cot, BigDecimal.valueOf(-PI), BigDecimal.valueOf(PI), BigDecimal.valueOf(0.1));
 
-        Sec sec = new Sec(0.00000001);
-        csvWriter.write("sec.csv", sec, BigDecimal.valueOf(-PI), BigDecimal.valueOf(PI), BigDecimal.valueOf(0.1));
 
         Ln ln = new Ln(0.00000001);
         csvWriter.write("ln.csv", ln, BigDecimal.valueOf(0), BigDecimal.valueOf(3), BigDecimal.valueOf(0.1));
@@ -40,6 +34,9 @@ public class Main {
 
         Log3 log3 = new Log3(0.00000001);
         csvWriter.write("log3.csv", log3, BigDecimal.valueOf(0), BigDecimal.valueOf(10), BigDecimal.valueOf(0.5));
+
+        Log5 log5 = new Log5(0.00000001);
+        csvWriter.write("log5.csv", log5, BigDecimal.valueOf(0), BigDecimal.valueOf(10), BigDecimal.valueOf(0.5));
 
         Log10 log10 = new Log10(0.00000001);
         csvWriter.write("log10.csv", log10, BigDecimal.valueOf(0), BigDecimal.valueOf(15), BigDecimal.valueOf(0.5));
